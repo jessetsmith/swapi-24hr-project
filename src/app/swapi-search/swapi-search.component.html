@@ -1,0 +1,11 @@
+<div id="search-component">
+        <h4><label for="search-box">People Search</label></h4>
+    
+        <input #peopleSearch id="search-box" (input)="search(peopleSearch.value)" />
+    
+        <ul class="search-result">
+        </ul>
+        <button (click)="searchPeople(peopleSearch.value);peopleSearch.value=''">Search</button>
+    </div>
+
+    

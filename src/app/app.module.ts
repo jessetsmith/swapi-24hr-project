@@ -8,13 +8,15 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { PeopleComponent } from './people/people.component';
 import { ShipsComponent } from './ships/ships.component';
 import { FilmsComponent } from './films/films.component';
+import { SwapiSearchComponent } from './swapi-search/swapi-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PeopleComponent,
     ShipsComponent,
-    FilmsComponent
+    FilmsComponent,
+    SwapiSearchComponent
   ],
   imports: [
     BrowserModule,

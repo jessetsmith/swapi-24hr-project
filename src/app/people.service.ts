@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { People } from '../app/people'
 
@@ -18,6 +18,18 @@ export class PeopleService {
     console.log(this.peoplesUrl)
     return this.http.get<People[]>(this.peoplesUrl) 
   }
+
+  //*Search Functionality*//
+  searchPeople(term: string): Observable<People[]> {
+    if(!term.trim()) {
+      //if not search term, return empty hero array. 
+      return of ([]);
+    }
+      console.log(this.http.get<People[]>
+        (`$this.peoplesUrl}/?search=${term}`))
+      // return this.http.get<People[]>
+      // (`${this.peoplesUrl}/?search=${term}`)
+      // }
+
 }
-
-
+}
