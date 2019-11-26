@@ -25,11 +25,10 @@ export class PeopleService {
       //if not search term, return empty hero array. 
       return of ([]);
     }
-      console.log(this.http.get<People[]>
-        (`$this.peoplesUrl}/?search=${term}`))
-      // return this.http.get<People[]>
-      // (`${this.peoplesUrl}/?search=${term}`)
-      // }
+      // console.log(this.http.get<People[]>
+      //   (`$this.peoplesUrl}/?search=${term}`))
+      return this.http.get<People[]>
+      (`${this.peoplesUrl}/?search=${term}`)
+      }
 
-}
 }
