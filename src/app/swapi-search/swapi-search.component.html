@@ -5,7 +5,28 @@
     
         <ul class="search-result">
         </ul>
-        <button (click)="searchPeople(peopleSearch.value);peopleSearch.value=''">Search</button>
-    </div>
+        <button (click)="search(peopleSearch.value);peopleSearch.value=''">Search</button>
+</div>
+
+
+
+<!-- <ul class='search-result'>
+        <li *ngFor='let people of peoples$ | async' >    
+            {{people.name}}
+        </li>
+    </ul> -->
+<!-- <table>
+<tr>
+    <th>Name:</th>
+    <th>Gender:</th>
+    <th>Home Planet:</th>
+    <th>Films:</th>
+</tr>
+    <tr *ngFor='let people of peoples$ | async'></tr>
+        <td>{{ people.name }}</td>
+        <td>{{ people.gender }}</td>
+        <td>{{ people.homeworld }}</td>
+        <td>{{ people.films }}</td>
+</table> -->
 
     

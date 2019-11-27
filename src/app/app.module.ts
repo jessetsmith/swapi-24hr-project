@@ -9,8 +9,10 @@ import { PeopleComponent } from './people/people.component';
 import { ShipsComponent } from './ships/ships.component';
 import { FilmsComponent } from './films/films.component';
 import { SwapiSearchComponent } from './swapi-search/swapi-search.component';
+import { PeopleService } from './people.service';
 import { FilmsSearchComponent } from './films-search/films-search.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     NoopAnimationsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [PeopleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
