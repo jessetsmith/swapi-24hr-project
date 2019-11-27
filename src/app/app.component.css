@@ -40,6 +40,8 @@ h1 {
 }
 
 body {
+    background-color: darkgrey;
+
     background-image: url(../assets/StarWarsBackground.png);
 }
 
