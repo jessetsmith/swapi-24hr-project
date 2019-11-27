@@ -4,3 +4,11 @@
     <p>{{films.results[0].title}}</p>
     <p>{{films.results[0].director}}</p>
     <p>{{films.results[0].release_date}}</p>
+
+    <div *ngFor="let f of films">
+            <ul>
+                <li>Title: {{f.title}}</li>
+                <li>Director: {{f.director}}</li>
+                <li>Release Date: {{f.release_date}}</li>
+        </ul>
+        </div>

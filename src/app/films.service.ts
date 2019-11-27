@@ -17,6 +17,7 @@ export class FilmsService {
 getFilms (): Observable<Films[]>{
   console.log(this.filmsUrl)
   return this.http.get<Films[]>(this.filmsUrl)
+  .pipe(map(result=> result['results']))
 }
 
 //*Search Functionality**/
