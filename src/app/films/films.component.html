@@ -1,7 +1,7 @@
 <!-- <app-films-search></app-films-search> -->
-<h1>Films</h1>
+<h1 class='starTitle'>Films</h1>
 
-    <p>{{films.results[0].title}}</p>
+    <!-- <p>{{films.results[0].title}}</p>
     <p>{{films.results[0].director}}</p>
     <p>{{films.results[0].release_date}}</p>
 
@@ -11,4 +11,18 @@
                 <li>Director: {{f.director}}</li>
                 <li>Release Date: {{f.release_date}}</li>
         </ul>
-        </div>
+        </div> -->
+
+        <div class='mainDiv'>
+                <div *ngFor='let film of films' id='peopleDisplay'>
+                        <div class='deck'>
+                                <div class='card'>
+                                    <div class='cardContainer'>
+                                        <p>Title: {{ film.title }}</p>
+                                        <p>Director: {{ film.director }}</p>
+                                        <p>Release Date: {{ film.release_date }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                </div>
