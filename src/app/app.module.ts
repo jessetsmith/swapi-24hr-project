@@ -11,7 +11,6 @@ import { FilmsComponent } from './films/films.component';
 import { SwapiSearchComponent } from './swapi-search/swapi-search.component';
 import { PeopleService } from './people.service';
 import { FilmsSearchComponent } from './films-search/films-search.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 
@@ -22,8 +21,7 @@ import {MatInputModule} from '@angular/material/input';
     ShipsComponent,
     FilmsComponent,
     SwapiSearchComponent,
-    FilmsSearchComponent,
-    DashboardComponent
+    FilmsSearchComponent
   ],
   imports: [
     BrowserModule,
