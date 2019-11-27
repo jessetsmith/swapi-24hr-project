@@ -25,6 +25,8 @@
     color: black;
     margin: 1em;
     padding: 1em;
+    border-radius: 2em;
+
 
 }
 
@@ -38,8 +40,9 @@
 }
 
 .mainDiv {
+    margin-top: 2em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
