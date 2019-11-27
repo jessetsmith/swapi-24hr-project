@@ -12,6 +12,8 @@ import { SwapiSearchComponent } from './swapi-search/swapi-search.component';
 import { PeopleService } from './people.service';
 import { FilmsSearchComponent } from './films-search/films-search.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {MatButtonModule} from '@angular/material/button';
+
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule
+    
   ],
   providers: [PeopleService],
   bootstrap: [AppComponent]

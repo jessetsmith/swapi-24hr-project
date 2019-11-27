@@ -1,8 +1,9 @@
 
-
+<div class='searchDiv'>
 <input #searchBar type='text' class='search' (input)='searchBar.value' placeholder="Search For People">
-<Button color='default' (click)='searchPeople(searchBar.value); displayPeople(people)' type='button'>Search People</Button>
-
+<button mat-button class='searchButton' color='default' (click)='searchPeople(searchBar.value); displayPeople(people)' type='button'>Search People</button>
+</div>
+<div class='mainDiv'>
 <div *ngFor='let peeps of people' id='peopleDisplay'>
         <div class='deck'>
                 <div class='card'>
@@ -15,6 +16,7 @@
                     </div>
                 </div>
             </div>
+</div>
 </div>
 
 
