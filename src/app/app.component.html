@@ -1,14 +1,25 @@
 
 
 <h1>{{title}}</h1>
+<<<<<<< HEAD
+  
+
+
+=======
 <div class="APIresults">
     <app-people></app-people>
     <app-starship></app-starship>
 </div>
+>>>>>>> 4c24b1e346bc4f68f437a6b43a88b95f8c21f0cd
 <nav>
-    <a routerLink="/dashboard">Dashboard</a>
-    <a routerLink="/people">People</a>
-    <a routerLink="/films">Films</a>
+    <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+            <a routerLink="/dashboard">Dashboard</a>
+            <a routerLink="/people">People</a>
+            <a routerLink="/films">Films</a>
+        </div>
+    </div>
 </nav>
 <router-outlet></router-outlet>
 <!-- <app-films></app-films> -->
