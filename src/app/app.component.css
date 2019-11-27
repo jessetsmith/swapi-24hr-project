@@ -1,7 +1,7 @@
-<<<<<<< HEAD
+
 .dropbtn {
-    background-color: #4CAF50;
-    color: white;
+    background-color:gold;
+    color:black;
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -32,8 +32,8 @@
   
   .dropdown:hover .dropdown-content {display: block;}
   
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
-=======
+  .dropdown:hover .dropbtn {background-color:lightgoldenrodyellow;}
+
 h1 {
     font-size: 3em;
     text-align: center;
@@ -42,4 +42,4 @@ h1 {
 body {
     background-image: url(../assets/StarWarsBackground.png);
 }
->>>>>>> 4c24b1e346bc4f68f437a6b43a88b95f8c21f0cd
+
