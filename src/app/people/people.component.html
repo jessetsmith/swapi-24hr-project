@@ -1,8 +1,10 @@
 
 <div class='searchDiv'>
-<input #searchBar type='text' class='search' (input)='searchBar.value' placeholder="Search For People">
+<input matInput #searchBar type='text' class='search' (input)='searchBar.value' placeholder="Search For People">
 <button mat-button class='searchButton' color='default' (click)='searchPeople(searchBar.value); displayPeople(people)' type='button'>Search People</button>
 </div>
+<h1 class='starTitle'>People</h1>
+
 <div class='mainDiv'>
 <div *ngFor='let peeps of people' id='peopleDisplay'>
         <div class='deck'>
