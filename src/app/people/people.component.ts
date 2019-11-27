@@ -40,15 +40,16 @@ export class PeopleComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getPeople();
+    this.getAllPeople();
   }
 
-  getPeople(): void {
-    this.peopleService.getPeople()
+  getAllPeople(): void {
+    this._peopleService.getAllPeople()
       .subscribe(
-        (people => this.people = people)
+        (allPeople => this.people = allPeople)
       )
     }
+
 }
 
 
