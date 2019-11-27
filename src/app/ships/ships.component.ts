@@ -18,7 +18,9 @@ export class ShipsComponent implements OnInit {
 
   getStarship(): void {
     this.starshipService.getStarship()
-      .subscribe(starship => this.starship = starship);
+      .subscribe(
+        (starship => this.starship = starship)
+        )
   }
 
 }
