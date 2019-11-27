@@ -9,6 +9,7 @@ import { Ship } from '../app/ship'
 })
 export class StarshipService {
   private starshipUrl = 'https://swapi.co/api/starships/';
+  type: object
 
   constructor(
     private http: HttpClient,
