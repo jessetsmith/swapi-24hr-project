@@ -9,6 +9,8 @@ import { PeopleComponent } from './people/people.component';
 import { ShipsComponent } from './ships/ships.component';
 import { FilmsComponent } from './films/films.component';
 import { SwapiSearchComponent } from './swapi-search/swapi-search.component';
+import { PeopleService } from './people.service';
+import { DisplayPeopleComponent } from './display-people/display-people.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { SwapiSearchComponent } from './swapi-search/swapi-search.component';
     PeopleComponent,
     ShipsComponent,
     FilmsComponent,
-    SwapiSearchComponent
+    SwapiSearchComponent,
+    DisplayPeopleComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,7 @@ import { SwapiSearchComponent } from './swapi-search/swapi-search.component';
     NoopAnimationsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [PeopleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

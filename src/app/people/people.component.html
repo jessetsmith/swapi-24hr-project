@@ -1,9 +1,26 @@
-<app-swapi-search></app-swapi-search>
+
+<input #searchBar type='text' class='search' (input)='searchBar.value' placeholder="Search For People">
+<Button color='default' (click)='searchPeople(searchBar.value); displayPeople(people)' type='button'>Search People</Button>
+
+<div *ngFor='let peeps of people' class='peopleDisplay'>
+        <div class='deck'>
+                <div class='card'>
+                    <div class='cardContainer'>
+                        <h1><em>{{ peeps.name }}</em></h1>
+                        <h3>{{ peeps.gender}}</h3>
+                        <p>{{ peeps.hair_color }}</p>
+                        <p>{{ peeps.eye_color }}</p>
+                        <p>{{ peeps.birth_year}}</p>
+                    </div>
+                </div>
+            </div>
+</div>
+ <!-- <app-swapi-search></app-swapi-search> -->
 <!-- <p>{{people}}</p> -->
-<ul>
+<!-- <ul> -->
 <!-- <li *ngFor="let p of people"> -->
-    <p>{{people.results[0].name}}</p>
+    <!-- <p>{{people.results[0].name}}</p>
     <p>{{people.results[0].gender}}</p>
-    <p>{{people.results[0].eye_color}}</p>
+    <p>{{people.results[0].eye_color}}</p> -->
 <!-- </li> -->
-</ul>
+<!-- </ul> --> 

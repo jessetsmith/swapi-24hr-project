@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { People } from '../people'
 import { PeopleService } from '../people.service'
+import { Observable, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-people',
@@ -8,17 +9,42 @@ import { PeopleService } from '../people.service'
   styleUrls: ['./people.component.css']
 })
 export class PeopleComponent implements OnInit {
-  people: People[];
+  people: any[];
+  private searchTerms = new Subject<string>();
+  peopleFound: boolean = false;
 
-  constructor(private peopleService: PeopleService) { }
+  handleSuccess(data){
+    this.peopleFound = true;
+    this.people = data.results;
+    console.log(data.results);
+  }
+
+  handleError(error){
+    console.log(error);
+  }
+
+  constructor(private _peopleService: PeopleService) { }
+
+  searchQuery(query: string): void {
+    this.searchTerms.next(query);
+  }
+
+  searchPeople(query: string){
+    return this._peopleService.getPeople(query).subscribe(
+      data => this.handleSuccess(data),
+      error => this.handleError(error),
+      () => console.log('Request Successful')
+
+    )
+  }
 
   ngOnInit() {
-    this.getPeople();
+    // this.getPeople();
   }
 
-  getPeople(): void {
-    this.peopleService.getPeople()
-      .subscribe(people => this.people = people);
-  }
+  // getPeople(): void {
+  //   this._peopleService.getPeople()
+  //     .subscribe(people => this.people = people);
+  // }
 
 }
