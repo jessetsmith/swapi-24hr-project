@@ -7,7 +7,7 @@ import { Ship } from '../app/ship'
 @Injectable({
   providedIn: 'root'
 })
-export class starshipService {
+export class StarshipService {
   private starshipUrl = 'https://swapi.co/api/starships/';
 
   constructor(
@@ -16,5 +16,6 @@ export class starshipService {
 
   getStarship (): Observable<Ship[]> {
     console.log(this.starshipUrl)
-    return this.http.get<Ship[]>(this.starshipUrl) 
+    return this.http.get<Ship[]>(this.starshipUrl)
+    .pipe(map(result=> result['results']))
 }}

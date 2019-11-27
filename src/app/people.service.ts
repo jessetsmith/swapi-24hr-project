@@ -10,7 +10,7 @@ import { People } from '../app/people'
 })
 export class PeopleService {
   private peoplesUrl = 'https://swapi.co/api/people/';
-  data: Object;
+  
 
   constructor(
     private http: HttpClient,

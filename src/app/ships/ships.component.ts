@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Ship } from '../ship'
-import { starshipService } from '../ships.service'
+import { StarshipService } from '../ships.service'
 
 @Component({
   selector: 'app-starship',
@@ -8,9 +8,9 @@ import { starshipService } from '../ships.service'
   styleUrls: ['./ships.component.css']
 })
 export class ShipsComponent implements OnInit {
-  ship: Ship[];
+  starship: Ship[];
 
-  constructor(private starshipService: starshipService) { }
+  constructor(private starshipService: StarshipService) { }
 
   ngOnInit() {
     this.getStarship();
@@ -18,7 +18,7 @@ export class ShipsComponent implements OnInit {
 
   getStarship(): void {
     this.starshipService.getStarship()
-      .subscribe(ship => this.ship = ship);
+      .subscribe(starship => this.starship = starship);
   }
 
 }
