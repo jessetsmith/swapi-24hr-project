@@ -22,6 +22,7 @@ import {MatInputModule} from '@angular/material/input';
     FilmsComponent,
     SwapiSearchComponent,
     FilmsSearchComponent
+
   ],
   imports: [
     BrowserModule,
