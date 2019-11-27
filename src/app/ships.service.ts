@@ -7,7 +7,7 @@ import { Ship } from '../app/ship'
 @Injectable({
   providedIn: 'root'
 })
-export class starshipService {
+export class StarshipService {
   private starshipUrl = 'https://swapi.co/api/starships/';
 
   constructor(
