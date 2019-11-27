@@ -16,5 +16,6 @@ export class starshipService {
 
   getStarship (): Observable<Ship[]> {
     console.log(this.starshipUrl)
-    return this.http.get<Ship[]>(this.starshipUrl) 
+    return this.http.get<Ship[]>(this.starshipUrl)
+    .pipe(map(result=> result['results']))
 }}
