@@ -13,6 +13,7 @@ export class PeopleService {
   private query: string;
   
   private peoplesUrl = 'https://swapi.co/api/people/?search=';
+  private allPeoplesUrl = 'https://swapi.co/api/people/';
   httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
   }
@@ -28,42 +29,11 @@ export class PeopleService {
       tap(_ =>  data => console.log(data))
     );
   }
-
-
-  // getPeople(query): Observable<People[]> {
-  //   console.log(this.peoplesUrl)
-  //   return this.http.get<People[]>(this.peoplesUrl) 
-  // }
-
-  //*Search Functionality*//
-  // searchPeople(term: string): Observable<People[]> {
-  //   if(!term.trim()) {
-  //     //if not search term, return empty hero array. 
-  //     return of ([]);
-  //   }
-  //     console.log(this.http.get<People[]>
-  //       (`$this.peoplesUrl}/?search=${term}`));
-
-  //     return this.http.get<People[]>
-  //     (`${this.peoplesUrl}/?search=${term}`)
-  //     }
-
-  getPeople (): Observable<People[]> {
-    console.log(this.peoplesUrl)
-    return this.http.get<People[]>(this.peoplesUrl) 
+  
+  getAllPeople (): Observable<People[]> {
+    console.log(this.allPeoplesUrl)
+    return this._http.get<People[]>(this.allPeoplesUrl)
     .pipe(map(result=>result['results']))
   }
-  
-  //*Search Functionality*//
-  searchPeople(term: string): Observable<People[]> {
-    if(!term.trim()) {
-      //if not search term, return empty hero array. 
-      return of ([]);
-    }
-      // console.log(this.http.get<People[]>
-      //   (`$this.peoplesUrl}/?search=${term}`))
-      return this.http.get<People[]>
-      (`${this.peoplesUrl}/?search=${term}`)
-      }
-
 }
+

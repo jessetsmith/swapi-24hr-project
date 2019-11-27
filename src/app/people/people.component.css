@@ -7,6 +7,8 @@
     transition: 0.3s;
     width: 30vw;
     text-align: center;
+    background-color: white;
+    color: black;
 
 }
 
@@ -17,4 +19,9 @@
 
 .cardContainer {
     padding: 1em 2em;
+}
+
+#peopleDisplay{
+   display: block;
+   position: relative;
 }
