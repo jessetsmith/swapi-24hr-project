@@ -1,9 +1,21 @@
 <app-swapi-search></app-swapi-search>
 <!-- <p>{{people}}</p> -->
-<ul>
-<!-- <li *ngFor="let p of people"> -->
-    <p>{{people.results[0].name}}</p>
+<!-- <ul>
+    <li>
+<li *ngFor="let p of people">  
+  <p>{{people.results[0].name}}</p>
     <p>{{people.results[0].gender}}</p>
-    <p>{{people.results[0].eye_color}}</p>
-<!-- </li> -->
+    <p>{{people.results[0].eye_color}}</p> 
+</li>
+</ul> -->
+
+<div *ngFor="let p of people">
+    <ul>
+        <li>Name: {{p.name}}</li>
+        <li>Gender: {{p.gender}}</li>
+        <li>Birth Year: {{p.birth_year}}</li>
 </ul>
+</div>
+    
+
+        

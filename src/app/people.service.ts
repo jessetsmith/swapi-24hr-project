@@ -4,11 +4,13 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { People } from '../app/people'
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class PeopleService {
   private peoplesUrl = 'https://swapi.co/api/people/';
+  data: Object;
 
   constructor(
     private http: HttpClient,
@@ -17,8 +19,9 @@ export class PeopleService {
   getPeople (): Observable<People[]> {
     console.log(this.peoplesUrl)
     return this.http.get<People[]>(this.peoplesUrl) 
+    .pipe(map(result=>result['results']))
   }
-
+  
   //*Search Functionality*//
   searchPeople(term: string): Observable<People[]> {
     if(!term.trim()) {
