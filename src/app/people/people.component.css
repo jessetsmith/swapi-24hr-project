@@ -10,7 +10,7 @@
 }
 
 .search {
-    width: 15em;
+    width: 20em;
 }
 .deck {
     display: inline-block;
@@ -45,4 +45,11 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.starTitle{
+    color:gold;
+    justify-content:center;
+    display:flex;
+    font-size:250%;
 }

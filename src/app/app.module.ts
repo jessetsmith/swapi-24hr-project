@@ -13,8 +13,7 @@ import { PeopleService } from './people.service';
 import { FilmsSearchComponent } from './films-search/films-search.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatButtonModule} from '@angular/material/button';
-
-
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -31,7 +30,8 @@ import {MatButtonModule} from '@angular/material/button';
     AppRoutingModule,
     NoopAnimationsModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule
     
   ],
   providers: [PeopleService],
