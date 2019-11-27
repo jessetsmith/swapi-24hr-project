@@ -4,11 +4,14 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { People } from '../app/people'
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class PeopleService {
+
   private query: string;
+  
   private peoplesUrl = 'https://swapi.co/api/people/?search=';
   httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -44,5 +47,23 @@ export class PeopleService {
   //     return this.http.get<People[]>
   //     (`${this.peoplesUrl}/?search=${term}`)
   //     }
+
+  getPeople (): Observable<People[]> {
+    console.log(this.peoplesUrl)
+    return this.http.get<People[]>(this.peoplesUrl) 
+    .pipe(map(result=>result['results']))
+  }
+  
+  //*Search Functionality*//
+  searchPeople(term: string): Observable<People[]> {
+    if(!term.trim()) {
+      //if not search term, return empty hero array. 
+      return of ([]);
+    }
+      // console.log(this.http.get<People[]>
+      //   (`$this.peoplesUrl}/?search=${term}`))
+      return this.http.get<People[]>
+      (`${this.peoplesUrl}/?search=${term}`)
+      }
 
 }

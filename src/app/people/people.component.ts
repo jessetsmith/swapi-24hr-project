@@ -29,6 +29,7 @@ export class PeopleComponent implements OnInit {
     this.searchTerms.next(query);
   }
 
+
   searchPeople(query: string){
     return this._peopleService.getPeople(query).subscribe(
       data => this.handleSuccess(data),
@@ -39,12 +40,17 @@ export class PeopleComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.getPeople();
+    this.getPeople();
   }
 
-  // getPeople(): void {
-  //   this._peopleService.getPeople()
-  //     .subscribe(people => this.people = people);
-  // }
-
+  getPeople(): void {
+    this.peopleService.getPeople()
+      .subscribe(
+        (people => this.people = people)
+      )
+    }
 }
+
+
+
+

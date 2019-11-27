@@ -1,2 +1,16 @@
 <h1>{{title}}</h1>
-<app-people></app-people>
+  
+<nav>
+    <div class="dropdown">
+        <button class="dropbtn">Explore SWAPI</button>
+        <div class="dropdown-content">
+            <a routerLink="/dashboard">Dashboard</a>
+            <a routerLink="/people">People</a>
+            <a routerLink="/films">Films</a>
+            <a routerLink="/ships">Space Ships</a>
+        </div>
+    </div>
+<nav>
+   
+<router-outlet></router-outlet>
+<!-- <app-films></app-films> -->

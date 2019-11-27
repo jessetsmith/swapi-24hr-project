@@ -10,7 +10,9 @@ import { ShipsComponent } from './ships/ships.component';
 import { FilmsComponent } from './films/films.component';
 import { SwapiSearchComponent } from './swapi-search/swapi-search.component';
 import { PeopleService } from './people.service';
-import { DisplayPeopleComponent } from './display-people/display-people.component';
+import { FilmsSearchComponent } from './films-search/films-search.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { DisplayPeopleComponent } from './display-people/display-people.componen
     ShipsComponent,
     FilmsComponent,
     SwapiSearchComponent,
-    DisplayPeopleComponent
+    FilmsSearchComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

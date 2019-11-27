@@ -8,6 +8,7 @@ import { People } from './people';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'SWAPI 24!=7';
 
   constructor(private peopleService: PeopleService) {
