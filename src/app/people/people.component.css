@@ -11,6 +11,8 @@
 
 .search {
     width: 20em;
+    border-radius: 2em;
+    text-align: center;
 }
 .deck {
     display: inline-block;
