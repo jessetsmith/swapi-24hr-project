@@ -21,7 +21,8 @@ import {MatInputModule} from '@angular/material/input';
     ShipsComponent,
     FilmsComponent,
     SwapiSearchComponent,
-    FilmsSearchComponent,
+    FilmsSearchComponent
+
   ],
   imports: [
     BrowserModule,
