@@ -6,11 +6,15 @@
     <p>{{starships.results[9].model}}</p> -->
     <!-- <p>{{people.results[0].eye_color}}</p> -->
 <!-- </li> -->
-<h1>Starships</h1>
-<div *ngFor="let s of starship">
-     <ul>
-        <li>Starship: {{s.name}}</li>
-        <li>Model: {{s.model}}</li>
-        <li>Starship Class: {{s.starship_class}}</li>
-    </ul> 
+<h1 class="starTitle ">Starships</h1>
+<div class="deck" *ngFor="let s of starship">
+        <div class='card'>
+                <div class='cardContainer'>
+                    
+                        <h1><em>Starship: {{s.name}}</em></h1>
+                        <h3>Model: {{s.model}}</h3>
+                        <p>Starship Class: {{s.starship_class}}</p>
+                   
+                </div>
+        </div>
  </div> 

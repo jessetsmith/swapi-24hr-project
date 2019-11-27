@@ -1,0 +1,54 @@
+.starTitle{
+    color:gold;
+    justify-content:center;
+    display:flex;
+    font-size:250%;
+}
+
+.searchDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.searchButton {
+    margin-left: 1em;
+    background-color: white;
+    color: black;
+}
+
+.search {
+    width: 15em;
+}
+.deck {
+    display: inline-block;
+}
+
+.card {
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 20vw;
+    text-align: center;
+    background-color: white;
+    color: black;
+    margin: 1em;
+    padding: 1em;
+    border-radius:2em;
+
+}
+
+.card:hover {
+    box-shadow: 0.5em 0.5em 2em rgba(0, 0, 0, 0.2);
+
+}
+
+.cardContainer {
+    /* padding: 1em 1em; */
+    
+}
+
+.mainDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
